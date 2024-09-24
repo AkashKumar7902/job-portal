@@ -1,4 +1,4 @@
-export const server = "http://localhost:4444";
+export const server = process.env.REACT_APP_BACKEND_URL;
 
 const apiList = {
   login: `${server}/auth/login`,
