@@ -35,6 +35,8 @@ const port = 4444;
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
+app.options('*', cors()); // enable pre-flight requests for all routes
+
 // Setting up middlewares
 app.use(cors());
 app.use(express.json());
